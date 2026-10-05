@@ -1,0 +1,30 @@
+{
+    "name": "sync-kit",
+    "version": "0.1.0",
+    "description": "Typed SDK and runtime for API integration syncs",
+    "type": "module",
+    "bin": {
+        "sync-kit": "dist/src/cli.js"
+    },
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json && cp src/store/schema.sql dist/src/store/",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run",
+        "dry-run": "node src/cli.ts dry-run"
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "fastify": "^5.12.5",
+        "pg": "^8.23.1",
+        "zod": "^3.25.76"
+    },
+    "devDependencies": {
+        "@types/node": "^22.20.5",
+        "@types/pg": "^8.23.1",
+        "typescript": "~5.9",
+        "vitest": "^3.2.7"
+    }
+}
