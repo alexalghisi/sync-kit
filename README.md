@@ -2,6 +2,8 @@
 
 Every integration ends up re-solving the same problems: tokens that expire mid-sync, APIs that rate-limit at the worst moment, pages of half-valid data, and knowing what actually changed since last time. sync-kit is a small, typed SDK and runtime that handles those parts, so the integration code only describes how to read the provider's API.
 
+**Download:** [latest release](https://github.com/alexalghisi/sync-kit/releases/latest)
+
 ![Dry runs of an incremental and a full sync, then the test suite against PostgreSQL](docs/dry-run.gif)
 
 ## Writing a sync
